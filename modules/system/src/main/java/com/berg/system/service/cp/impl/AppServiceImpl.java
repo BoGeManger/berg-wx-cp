@@ -1,6 +1,6 @@
-package com.berg.system.service.miniapp.impl;
+package com.berg.system.service.cp.impl;
 
-import com.berg.system.service.miniapp.AppService;
+import com.berg.system.service.cp.AppService;
 import com.berg.vo.cp.CpAppVo;
 import com.berg.wx.properties.WxCpProperties;
 import org.springframework.beans.factory.annotation.Autowired;

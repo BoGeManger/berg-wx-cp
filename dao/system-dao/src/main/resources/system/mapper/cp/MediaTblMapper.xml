@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.berg.dao.system.cp.mapper.MediaTblMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.berg.dao.system.cp.entity.MediaTbl">
+        <id column="id" property="id" />
+        <result column="corp_id" property="corpId" />
+        <result column="media_id" property="mediaId" />
+        <result column="url" property="url" />
+        <result column="created_at" property="createdAt" />
+        <result column="media_type" property="mediaType" />
+        <result column="type" property="type" />
+        <result column="remark" property="remark" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user" property="createUser" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, corp_id, media_id, url, created_at, media_type, type, remark, create_time, create_user
+    </sql>
+
+</mapper>

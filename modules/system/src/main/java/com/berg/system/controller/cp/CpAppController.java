@@ -2,7 +2,7 @@ package com.berg.system.controller.cp;
 
 import com.berg.common.controller.AbstractController;
 import com.berg.common.constant.Result;
-import com.berg.system.service.miniapp.AppService;
+import com.berg.system.service.cp.AppService;
 import com.berg.vo.cp.CpAppVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

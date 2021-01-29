@@ -25,7 +25,7 @@ public class UserServiceImpl extends AbstractService implements UserService {
             WxCpOauth2UserInfo wxCpOauth2UserInfo = WxCpUtil.getService(corpId).getOauth2Service().getUserInfo(code);
             BeanUtils.copyProperties(wxCpOauth2UserInfo,result);
         }catch (Exception ex){
-            throw new FailException("调用获取用户信息接口userInfo失败:"+ex.getMessage());
+            throw new FailException("调用企业号获取用户信息接口userInfo失败:"+ex.getMessage());
         }
         return result;
     }

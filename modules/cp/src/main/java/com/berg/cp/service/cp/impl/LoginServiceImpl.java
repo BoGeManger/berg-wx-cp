@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class LoginServiceImpl extends AbstractService implements LoginService {
 
     /**
-     * 获取企业微信网页授权地址
+     * 获取微信网页授权地址
      * @param input
      * @return
      */
@@ -22,7 +22,7 @@ public class LoginServiceImpl extends AbstractService implements LoginService {
         try{
             url = WxCpUtil.getService(corpId).getOauth2Service().buildAuthorizationUrl(input.getRedirectUri(),input.getState());
         }catch (Exception ex){
-            throw new FailException("调用获取企业微信网页授权地址接口getAuthUrl失败:"+ex.getMessage());
+            throw new FailException("调用企业号获取网页授权地址接口getAuthUrl失败:"+ex.getMessage());
         }
         return url;
     }

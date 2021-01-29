@@ -1,4 +1,4 @@
-package com.berg.system.service.miniapp;
+package com.berg.system.service.cp;
 
 import com.berg.vo.cp.CpAppVo;
 

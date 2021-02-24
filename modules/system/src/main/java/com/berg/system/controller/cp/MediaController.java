@@ -26,7 +26,7 @@ public class MediaController extends AbstractController {
     @ApiOperation("获取素材分页列表")
     @GetMapping(value = "getMediaPage")
     public Result<PageInfo<MediaVo>> getMediaPage(@Validated GetMediaPageInVo input){
-        return getSuccessResult("请求成功",mediaService.getMediaPage(input));
+        return success("请求成功",()->mediaService.getMediaPage(input));
     }
 
 
@@ -36,14 +36,14 @@ public class MediaController extends AbstractController {
                                        @ApiParam(value = "微信企业号corpId",required = true) @RequestParam(value = "corpId") String corpId,
                                        @ApiParam(value = "素材类型(image 图片 voice 语音 video 视频 thumb 缩略图)",required = true) @RequestParam(value = "mediaType") String mediaType,
                                        @ApiParam(value = "描述") @RequestParam(value = "remark",required = false)String remark){
-        return getSuccessResult("请求成功",mediaService.upload(corpId,mediaType,remark,file));
+        return success("请求成功",()->mediaService.upload(corpId,mediaType,remark,file));
     }
 
     @ApiOperation("上传图片")
     @PostMapping(value = "uploadImg",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public Result<Boolean> uploadImg(@ApiParam(value = "文件",required = true) @RequestPart(value = "file") MultipartFile file,
+    public Result<String> uploadImg(@ApiParam(value = "文件",required = true) @RequestPart(value = "file") MultipartFile file,
                                        @ApiParam(value = "微信企业号corpId",required = true) @RequestParam(value = "corpId") String corpId,
                                        @ApiParam(value = "描述") @RequestParam(value = "remark",required = false)String remark){
-        return getSuccessResult("请求成功",mediaService.uploadImg(corpId,remark,file));
+        return success("请求成功",()->mediaService.uploadImg(corpId,remark,file));
     }
 }

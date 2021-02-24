@@ -24,6 +24,6 @@ public class CpAppController extends AbstractController {
     @ApiOperation("获取企业号应用列表")
     @GetMapping(value = "getAppList")
     public Result<List<CpAppVo>> getAppList(){
-        return getSuccessResult("请求成功",appService.getAppList());
+        return success("请求成功",()->appService.getAppList());
     }
 }

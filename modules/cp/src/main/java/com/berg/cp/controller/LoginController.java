@@ -23,6 +23,6 @@ public class LoginController extends AbstractController {
     @ApiOperation(value = "获取公众号网页授权地址")
     @GetMapping(value = "getAuthUrl")
     public Result<String> getAuthUrl(@Validated CpGetAuthUrlInVo input){
-        return getSuccessResult("请求成功",loginService.getAuthUrl(input));
+        return success("请求成功",()->loginService.getAuthUrl(input));
     }
 }

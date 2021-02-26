@@ -40,7 +40,7 @@
 |名称|定义|端口|workerId|
 |:----: |:----:|:----:|:----:|
 |system|后台服务|42000|0|
-|miniapp|小程序服务|43000|1|
+|cp|企业号服务|43000|1|
 
 * 使用分布式id生成需配置workerId和datacenterId，需保证每个服务workerId和datacenterId组合均不一致，docker容器初始化时workerId为默认设置，datacenterId则根据端口号生成，如40001的datacenterId即为1，以此规则命名
 
